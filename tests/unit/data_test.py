@@ -1,4 +1,4 @@
-# test integrity of the input data
+# Test integrity of the input data
 import os
 import numpy as np
 import pandas as pd
@@ -12,6 +12,7 @@ def get_absPath(filename):
         )
     )
     return path
+
 
 # number of features
 expected_columns = 10
@@ -51,6 +52,7 @@ historical_std = np.array(
 # maximal relative change in feature mean or standrd deviation
 # that we can tolerate
 shift_tolerance = 3
+
 
 def test_check_schema():
     datafile = get_absPath("diabetes.csv")
